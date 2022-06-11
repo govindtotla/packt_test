@@ -50,6 +50,7 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 
 ## Get it Up and Running
 
+```bash
 # go into the project
 cd packt_test
 
@@ -86,7 +87,6 @@ BROADCAST_DRIVER=pusher
 # serve the application
 php artisan serve --port 8000
 
-
 # run webpack and watch for changes
 npm run watch
-
+```
