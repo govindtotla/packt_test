@@ -32,20 +32,6 @@ If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Lar
 
 We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
 
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/)**
-- **[OP.GG](https://op.gg)**
-
 ## Contributing
 
 Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
@@ -61,5 +47,46 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
->>>>>>> master
->>>>>>> master
+
+## Get it Up and Running
+
+# go into the project
+cd packt_test
+
+# create a .env file
+cp .env.example .env
+
+# install composer dependencies
+composer update
+
+# install npm dependencies
+npm install
+
+# generate a key for your application
+php artisan key:generate
+
+# add the database connection config to your .env file
+DB_CONNECTION=mysql
+DB_DATABASE=chat_db
+DB_USERNAME=root
+DB_PASSWORD=
+
+# run the migration files to generate the schema
+php artisan migrate
+
+# visit https://pusher.com and create a free app. then copy the keys into your .env file
+PUSHER_APP_ID=your_pusher_app_id
+PUSHER_APP_KEY=your_pusher_app_key
+PUSHER_APP_SECRET=your_pusher_app_secret
+PUSHER_APP_CLUSTER=your_pusher_cluster
+
+# change the BROADCAST_DRIVER in your .env to pusher
+BROADCAST_DRIVER=pusher
+
+# serve the application
+php artisan serve --port 8000
+
+
+# run webpack and watch for changes
+npm run watch
+
