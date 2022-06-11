@@ -12,13 +12,13 @@ export default new Vuex.Store({
 
   actions: {
     async getAllPosts({ commit }) {
-      return commit('setPosts', await axios.get('/posts'))
+      return commit('setPosts', await axios.get('/api/products'))
     },
   },
 
   mutations: {
     setPosts(state, response) {
-      state.posts = response.data.data;
+      state.posts = JSON.parse(response.data.data);
     },
   },
   strict: debug
