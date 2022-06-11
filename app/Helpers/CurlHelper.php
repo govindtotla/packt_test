@@ -3,9 +3,18 @@
 namespace App\Helpers;
 
 use Exception;
+use Illuminate\Support\Facades\Log;
 
 class CurlHelper
-{
+{    
+    /**
+     * callAPI
+     *
+     * @param  mixed $method
+     * @param  mixed $url
+     * @param  mixed $data
+     * @return void
+     */
     public static function callAPI($method, $url, $data)
     {
         $baseUrl = env('PACKT_API_BASE', 'https://api.packt.com/api/v1/');

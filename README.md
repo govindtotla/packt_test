@@ -87,6 +87,6 @@ BROADCAST_DRIVER=pusher
 # serve the application
 php artisan serve --port 8000
 
-# run webpack and watch for changes
+# run webpack and watch for changes if required
 npm run watch
 ```

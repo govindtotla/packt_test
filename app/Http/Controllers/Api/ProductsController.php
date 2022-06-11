@@ -2,17 +2,16 @@
 
 namespace App\Http\Controllers\Api;
 
-use Illuminate\Http\Request;
-
 use App\Helpers\CurlHelper;
-use App\Models\Post;
-use App\Models\PostImage;
-
-use Auth;
-use Storage;
 
 class ProductsController
 {
+	    
+    /**
+     * index
+     *
+     * @return void
+     */
     function index()
     {
 		$url = 'products?page=1';
